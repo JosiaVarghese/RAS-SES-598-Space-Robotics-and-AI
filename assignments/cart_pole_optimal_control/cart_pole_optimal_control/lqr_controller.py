@@ -33,8 +33,8 @@ class CartPoleLQRController(Node):
         ])
         
         # LQR cost matrices
-        self.Q = np.diag([1.0, 1.0, 10.0, 10.0])  # State cost
-        self.R = np.array([[0.1]])  # Control cost
+        self.Q = np.diag([200, 85, 15, 150])  # State cost
+        self.R = np.array([[2.5]])  # Control cost
         
         # Compute LQR gain matrix
         self.K = self.compute_lqr_gain()
